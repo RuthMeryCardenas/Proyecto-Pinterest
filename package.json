@@ -1,0 +1,32 @@
+{
+  "name": "proyecto-pinterest",
+  "version": "1.0.0",
+  "description": "Replica de board de pinterest",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuthMeryCardenas/Proyecto-Pinterest.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Mery Cardenas - Wendy Reyes - Katherine Ortega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuthMeryCardenas/Proyecto-Pinterest/issues"
+  },
+  "homepage": "https://github.com/RuthMeryCardenas/Proyecto-Pinterest#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
