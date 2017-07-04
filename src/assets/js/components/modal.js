@@ -1,1 +1,1 @@
-console.log('mooadal');
+console.log('modal');
