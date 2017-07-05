@@ -31,6 +31,10 @@ const sources = {
     rootJS: config.source + paths.assets + paths.mainJS
 };
 
+gulp.task('icons', () =>{
+   gulp.src(sources.assets + 'icons/**/*').pipe(gulp.dest(config.dist + paths.assets + 'icons'));
+});
+
 gulp.task('html', () => {
     gulp.src(sources.html).pipe(gulp.dest(config.dist));
 });
@@ -68,6 +72,10 @@ gulp.task('html-watch', ["html"], function (done) {
     done();
 });
 
+
+gulp.task('start', ['icons', 'html', 'sass', 'js']);
+
+
 gulp.task('serve', function () {
     browserSync.init({
         server: {
@@ -78,3 +86,4 @@ gulp.task('serve', function () {
     gulp.watch(sources.sass, ["sass-watch"]);
     gulp.watch(sources.js, ["js-watch"]);
 });
+

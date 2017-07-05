@@ -1,7 +1,16 @@
 @import "vendor/bootstrap";
 
-$primary-color: #987;
+//Gris soft (buscador) : whitesmoke
+//                   Gris hard : dimgray
+//                 Fondo: white
+//               Rojo : firebrick
 
-h1{
+$primary-color: #983457;
+
+body{
+  background-color: #333;
+}
+
+h1 {
   color: $primary-color;
 }
