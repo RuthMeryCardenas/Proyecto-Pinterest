@@ -1,3 +1,4 @@
+
 //COMPONENT HEADER
 
 const Header = () => {
@@ -10,5 +11,3 @@ const Header = () => {
 
     return nav;
 };
-
-//END COMPONET HEADER
