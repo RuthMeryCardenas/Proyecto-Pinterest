@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 const render = (root) => {
     root.empty();
     const wrapper = $('<div class="wrapper"></div>');
@@ -19,19 +18,25 @@ const state = {
     current_pin: "AZvD2sZHc13NAEh_yzBNFXT2gG8Ev5dHlBFLxorpuq7RIFTL66qnsJI"
 };
 
-
 $(_ => {
 
-    getJSON(generate_url("board", "web-ui"), (err, json) => {
+    getJSON(generate_url("board"), (err, json) => {
         if (err) {
             return alert(err.message);
         }
         state.board = json.data;
-        console.log(state.board);
+
+        getJSON(generate_url('creator-board'), (err,data) => {
+            if (err) {
+                return alert(err.message);
+            }
+            state.creator_board = data.data;
+            console.log(state.creator_board);
+            const root = $('.root');
+            render(root);
+        });
+
     });
 
-    const root = $('.root');
-
-    render(root);
 
 });

@@ -1,10 +1,9 @@
-
 //GETJSON
 
 
 const generate_url = (component) => {
     const staticUrl = 'https://api.pinterest.com/v1/';
-    const token = "/?access_token=ATdIVAQW5I_35SyV8v2xDC4mWg29FM4qDn7rhahEIux5zaBB9QAAAAA";
+    const token = "/?access_token=AUVSR6Z6hsEA0f5dwQ_hUYr5U38pFM7IN1a0bWVEIux5zaBB9QAAAAA";
     let boardCreator = "arabelyuska";
     let boardName = "web-ui";
     let data = null;
@@ -21,11 +20,11 @@ const generate_url = (component) => {
             break;
         case "pin-list":
             data = "&fields=id%2Clink%2Cnote%2Curl%2Cimage%2Ccolor%2Cmedia%2Cattribution%2Coriginal_link%2Cmetadata%2Cboard%2Ccounts%2Ccreated_at%2Ccreator";
-            url =  "boards/" + boardCreator + '/' + boardName + "/pins" + token + data;
+            url = "boards/" + boardCreator + '/' + boardName + "/pins" + token + data;
             break;
         case "pin":
             data = "&fields=id%2Clink%2Cnote%2Curl%2Cattribution%2Cboard%2Ccolor%2Cmetadata%2Cmedia%2Ccounts%2Ccreated_at%2Coriginal_link%2Ccreator%2Cimage";
-            url =  "pins/" + state.current_pin + token + data;
+            url = "pins/" + state.current_pin + token + data;
             break;
         default:
     }

@@ -3,14 +3,16 @@ const Board = () => {
     const row = $('<div class="row"></div>');
     const info = $('<div class="col-xs-6 col-lg-2 col-lg-offset-2"></div>');
     const divimage = $('<div class="col-lg-2 col-lg-offset-4 col-xs-6 container__img"></div>');
-    const img = $('<img src="https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_280.jpg">');
+    const img = $('<img/>').attr('src',state.creator_board.image['60x60'].url);
+
+
 
     const divBtn = $('<div class="hidden-lg container__btn-follow"></div>');
     const btnFollow = $('<button class="btn btn-default"><strong>Seguir tablero</strong></button>');
 
-    const nameBoard = $('<h1><strong>Web UI</strong></h1>');
-    const pines = $('<p>30 Pines</p>');
-    const followers = $('<p>84 Seguidores</p>');
+    const nameBoard = $('<h1><strong>   '+ state.board.name +'</strong></h1>');
+    const pines = $('<p>'+state.board.counts.pins+' Pines</p>');
+    const followers = $('<p>'+state.board.counts.followers+' Seguidores</p>');
 
     info.append(nameBoard);
     info.append(pines);
