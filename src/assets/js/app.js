@@ -1,5 +1,14 @@
 'use strict';
 console.log("cargando... app.js");
+//ARCHIVO APP
+const render = (root) => {
+    root.empty();
+    const wrapper = $('<div class="wrapper"></div>');
+
+    wrapper.append(Header());
+		wrapper.append(Grid());
+    root.append(wrapper);
+};
 
 const state = {
   user         : null,
@@ -23,6 +32,8 @@ $( _ => {
   getJSON(generate_url("pin-list","web-ui"), (err, json) => {
     if (err) { return alert(err.message);}
     state.pins = json.data;
+    const root = $('.root');
+    render(root);
     console.log(state.pins);
   });
   getJSON(generate_url("pin",state.current_pin), (err, json) => {
