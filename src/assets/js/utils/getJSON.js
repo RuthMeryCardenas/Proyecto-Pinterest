@@ -6,7 +6,7 @@
 const url = {
     url: "https://api.pinterest.com/v1/",
     user: "arabelyuska/",
-    token: "?access_token=ATdIVAQW5I_35SyV8v2xDC4mWg29FM4qDn7rhahEIux5zaBB9QAAAAA&"
+    token: "?access_token=AUVSR6Z6hsEA0f5dwQ_hUYr5U38pFM7IN1a0bWVEIux5zaBB9QAAAAA&"
 };
 
 $.getJSON(url.url + 'boards/' + url.user + "web-ui/" + url.token + 'fields=id%2Cname%2Curl%2Ccreator%2Cimage%2Ccounts', (data) => {
