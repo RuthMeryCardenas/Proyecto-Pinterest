@@ -35,7 +35,7 @@ $(_ => {
 
             state.creator_board = data.data;
 
-            getJSON(url, (err, obj) => {
+            getJSON(generate_url('pin-list'), (err, obj) => {
                 if (err) {
                     return alert(err.message);
                 }

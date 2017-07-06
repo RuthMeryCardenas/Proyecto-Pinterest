@@ -12,8 +12,8 @@ const Grid = (update) => {
 
 			const user = $('<div class="row"></div>');
 			const imgUser = $('<div class="col-xs-2"></div>');
-			const avatar = $('<img src="https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_280.jpg" class="img-circle" style="width: 50px">');
-			const h1 = $('<div class="col-xs-10"><h1>'+state.pins[i].creator.first_name+'</h1></div>');
+			const avatar = $('<img class="img-circle" style="width: 50px">').attr('src',state.creator_board.image['60x60'].url);
+			const h1 = $('<div class="col-xs-10"><h4>'+state.pins[i].creator.first_name+'</h4></div>');
 			const p = $('<p>'+state.pins[i].board.name+'</p>');
 			console.log(state.pins[i].metadata);
 
@@ -34,4 +34,4 @@ const Grid = (update) => {
 
   container.append(row);
   return container;
-}
+};
