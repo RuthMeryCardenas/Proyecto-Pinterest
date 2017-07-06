@@ -26,27 +26,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-box-search .path1:before {
+.icon-coment:before {
   content: "\e900";
+  color: #b4b4b4;
+}
+.icon-box-search .path1:before {
+  content: "\e901";
   color: rgb(254, 254, 254);
 }
 .icon-box-search .path2:before {
-  content: "\e901";
-  margin-left: -1em;
-  color: rgb(252, 252, 252);
-}
-.icon-box-search .path3:before {
   content: "\e902";
   margin-left: -1em;
   color: rgb(252, 252, 252);
 }
+.icon-box-search .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(252, 252, 252);
+}
 .icon-box-search .path4:before {
-  content: "\e905";
+  content: "\e904";
   margin-left: -1em;
   color: rgb(252, 252, 252);
 }
 .icon-box-search .path5:before {
-  content: "\e906";
+  content: "\e905";
   margin-left: -1em;
   color: rgb(252, 252, 252);
 }
@@ -58,7 +62,7 @@
   content: "\e909";
   color: #555;
 }
-.icon-coment:before {
+.icon-up:before {
   content: "\e90a";
   color: #b4b4b4;
 }
@@ -101,20 +105,7 @@
   content: "\e913";
   color: #b4b4b4;
 }
-.icon-up:before {
-  content: "\e914";
-  color: #b4b4b4;
-}
 .icon-user:before {
   content: "\e915";
   color: #b4b4b4;
-}
-.icon-facebook:before {
-  content: "\e903";
-}
-.icon-instagram:before {
-  content: "\e904";
-}
-.icon-twitter:before {
-  content: "\e908";
 }

@@ -1,17 +1,102 @@
 @import "vendor/bootstrap";
 @import "vendor/_icon";
 
+$inline-block: inline-block;
 //Gris soft (buscador) : whitesmoke
 //                   Gris hard : dimgray
 //                 Fondo: white
 //               Rojo : firebrick
 
-$primary-color: #983457;
-
-body{
-  background-color: #333;
+body {
+  padding-top: 70px;
+  color: $gray;
 }
 
-h1 {
-  color: $primary-color;
+.btn.btn-danger {
+  background-color: #b7071b;
+  font-weight: bold;
+  &:hover {
+    background-color: #9e0617;
+  }
+  &:focus {
+    outline: none;
+  }
+  span[class^=icon-] {
+    font-size: 1em;
+  }
 }
+
+.navbar {
+  .container__nav {
+    background-color: $navbar-default-bg;
+    border-bottom: 1px solid #eee;
+  }
+  .container__title {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  h3 {
+    margin: 15px 0px;
+  }
+}
+
+.navbar-brand {
+  img {
+    width: 27px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+.form-control {
+  display: $inline-block;
+  width: 85%;
+}
+
+.form-group {
+  .icon-search {
+    font-size: 1.8rem;
+  }
+}
+
+.icon-search {
+  vertical-align: middle;
+  font-size: 2.2rem;
+}
+
+.container__nav {
+  .icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    .icons {
+      display: $inline-block;
+      padding: 13px 20px;
+      font-size: 2.7rem;
+    }
+  }
+}
+.container__title{
+  .transitionIn{
+    opacity: 1;
+    transform: translate(0,66px);
+    transition: 300ms easy-out;
+  }
+  .transitionOut{
+    opacity: 0;
+    transform: translate(0,0);
+    transition: 300ms easy-out;
+  }
+  .container__btn{
+    padding: 18px;
+  }
+  .container__icon{
+    font-size: 2.5rem;
+    padding: 15px 60px;
+  }
+}
+
+.navbar-header {
+  display: $inline-block;
+}
+
