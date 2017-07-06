@@ -30,13 +30,6 @@ const load_ContentModal = (container) => {
     modal_content.append(Modal_body(state.current_pin));
   });
   $(container).append(modal_content);
-  // const modal_content = $('<div class="modal-content"></div>');
-  // const button_header = $('<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>');
-  // const span = $('<span aria-hidden="true">&times;</span>');
-  // const modal_body = $('<div class="modal-body">....</div>');
-  // const modal_footer = $('<div class="modal-footer"></div>');
-  // const button_footer = $('<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>');
-
 }
 
 
@@ -77,12 +70,6 @@ const Modal_body = (pin) => {
   const row_1 = $('<div class="row"></div>');
   const pin_title = $('<div class="col-xs-12 pin-title">prueba</div>');
   // const pin_title = $('<div class="col-xs-12 pin-title">' + pin.metadata.article.name +'</div>');
-  // if (pin.metadata.hasOwnProperty('article')) {
-    // console.log("la propiedad existe");
-    // if (pin.metadata.article.hasOwnProperty('name')) {
-    //   pin_title = $('<div class="col-xs-12 pin-title">' + pin.metadata.article.name +'</div>');
-    // }
-  // }
   const row_2 = $('<div class="row"></div>');
   const pin_container_image = $('<div class="col-xs-12 pin-image"></div>');
   const pin_image = $('<img src="' + pin.image.original.url + '" alt="">');
@@ -114,27 +101,3 @@ const Modal_body = (pin) => {
 
   return modal_body;
 }
-
-// $('#exampleModal').on('show.bs.modal', function (event) {
-//   console.log("El modal se está abriendo");
-//   console.log("Id del pin " + state.current_pin);
-//   getJSON(generate_url("pin",state.current_pin), (err, json) => {
-//     if (err) { return alert(err.message);}
-//     state.current_pin = json.data;
-//     var modal = $("#exampleModal")
-//     modal.find('.pin-title').text(state.current_pin.metadata.article.name);
-//     console.log();
-//     modal.find('.pin-image img').attr("src",state.current_pin.image.original.url);
-//     modal.find('.pin-auhor .brand img').attr("src",state.current_pin.metadata.link.favicon);
-//     modal.find('.pin-author .site-name span').text(state.current_pin.metadata.link.site_name);
-//     modal.find('.pin-author .site-name span').text(state.current_pin.metadata.link.site_name);
-//     modal.find('.pin-author .reading-it a').attr("href",state.current_pin.original_link);
-//   });
-//   var button = $(event.relatedTarget) // Button that triggered the modal
-//   var recipient = button.data('whatever') // Extract info from data-* attributes
-//
-// });
-
-// $('#exampleModal').on('hidden.bs.modal', function (e) {
-//   console.log("El modal se está cerrando");
-// })
