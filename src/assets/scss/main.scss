@@ -1,5 +1,17 @@
-$primary-color: pink;
+@import "vendor/bootstrap";
+@import "vendor/_icon";
 
-body {
-  background-color: $primary-color;
+//Gris soft (buscador) : whitesmoke
+//                   Gris hard : dimgray
+//                 Fondo: white
+//               Rojo : firebrick
+
+$primary-color: #983457;
+
+body{
+  background-color: #333;
+}
+
+h1 {
+  color: $primary-color;
 }

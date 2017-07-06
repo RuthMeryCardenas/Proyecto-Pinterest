@@ -1,18 +1,4 @@
-console.log('cargar lista de pines');
-
 'use strict';
-const render = (root) => {
-  root.empty();
-  const wrapper = $('<div class="wrapper"></div>');
-  wrapper.append(Grid(_ => render(root)));
-  root.append(wrapper);
-}
-
-const state = {
-	board: null,
-	pins: null,
-	current_pin: null
-};
 
 const Grid = (update) => {
   const container = $('<div id="grid" class="container"></div>');
@@ -51,13 +37,3 @@ const Grid = (update) => {
   container.append(row);
   return container;
 }
-
-$( _ => {
-
-  getJSON(url, (err, json) => {
-    if (err) { return alert(err.message);}
-		state.pins = json.data;
-		const root = $('.root');
-		render(root);
-  });
-});
