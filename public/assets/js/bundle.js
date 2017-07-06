@@ -9,9 +9,10 @@ this.activeTarget=b,this.clear();var c=this.selector+'[data-target="'+b+'"],'+th
 
 //GETJSON
 
-const urlGenerate = (component) => {
+
+const generate_url = (component) => {
     const staticUrl = 'https://api.pinterest.com/v1/';
-    const token = "/?access_token=AdZr116hPQFc_5cV-0_N3MTDskptFM6A_fkl_oFEIux5zaBB9QAAAAA";
+    const token = "/?access_token=ATdIVAQW5I_35SyV8v2xDC4mWg29FM4qDn7rhahEIux5zaBB9QAAAAA";
     let boardCreator = "arabelyuska";
     let boardName = "web-ui";
     let data = null;
@@ -39,11 +40,22 @@ const urlGenerate = (component) => {
     return staticUrl + url;
 };
 
-const get = (url, callback) => {
-    $.getJSON(url, (data) => {
-        //if (data.status !== 200) return callback(new Error("Error al obtener la data"));
-        callback(null, data);
+const getJSON = (url, cb) => {
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('load', () => {
+
+        if (xhr.status !== 200) {
+            return cb(new Error('Error loading JSON from ' + url + '(' + xhr.status + ')'));
+        }
+
+        cb(null, xhr.response);
     });
+
+    xhr.open('GET', url);
+    xhr.responseType = 'json';
+    xhr.send();
 };
 
 //END GETJSON
@@ -51,22 +63,26 @@ const get = (url, callback) => {
 const Board = () => {
     const container = $('<div class="container container__userboard"></div>');
     const row = $('<div class="row"></div>');
-    const info = $('<div class="col-lg-2 col-lg-offset-2"></div>');
-    const image = $('<div class=" col-lg-2 col-lg-offset-4"></div>');
+    const info = $('<div class="col-xs-6 col-lg-2 col-lg-offset-2"></div>');
+    const divimage = $('<div class="col-lg-2 col-lg-offset-4 col-xs-6 container__img"></div>');
+    const img = $('<img src="https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_280.jpg">');
 
-    const nameBoard = $()
+    const divBtn = $('<div class="hidden-lg container__btn-follow"></div>');
+    const btnFollow = $('<button class="btn btn-default"><strong>Seguir tablero</strong></button>');
 
-    /*get(urlGenerate('creator-board'), (err, data) => {
+    const nameBoard = $('<h1><strong>Web UI</strong></h1>');
+    const pines = $('<p>30 Pines</p>');
+    const followers = $('<p>84 Seguidores</p>');
 
-    });*/
+    info.append(nameBoard);
+    info.append(pines);
+    info.append(followers);
 
-    get(urlGenerate('board'),(err,data) => {
-        state.creator_board = data.data;
-        console.log(state.creator_board);
-    });
-
+    divBtn.append(btnFollow);
+    container.append(divBtn);
     row.append(info);
-    row.append(image);
+    divimage.append(img);
+    row.append(divimage);
     container.append(row);
 
     return container;
@@ -164,6 +180,8 @@ console.log('cargar lista de pines');
 
 'use strict';
 
+
+
 const render = (root) => {
     root.empty();
     const wrapper = $('<div class="wrapper"></div>');
@@ -181,14 +199,15 @@ const state = {
     current_pin: "AZvD2sZHc13NAEh_yzBNFXT2gG8Ev5dHlBFLxorpuq7RIFTL66qnsJI"
 };
 
-$( _ => {
 
-    get(urlGenerate('pin-list'),(err,data) => {
-        console.log(data);
-    });
+$(_ => {
 
-    get(urlGenerate('pin'),(err,data) => {
-        console.log(data);
+    getJSON(generate_url("board", "web-ui"), (err, json) => {
+        if (err) {
+            return alert(err.message);
+        }
+        state.board = json.data;
+        console.log(state.board);
     });
 
     const root = $('.root');

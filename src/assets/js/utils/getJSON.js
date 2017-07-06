@@ -1,9 +1,10 @@
 
 //GETJSON
 
-const urlGenerate = (component) => {
+
+const generate_url = (component) => {
     const staticUrl = 'https://api.pinterest.com/v1/';
-    const token = "/?access_token=AdZr116hPQFc_5cV-0_N3MTDskptFM6A_fkl_oFEIux5zaBB9QAAAAA";
+    const token = "/?access_token=ATdIVAQW5I_35SyV8v2xDC4mWg29FM4qDn7rhahEIux5zaBB9QAAAAA";
     let boardCreator = "arabelyuska";
     let boardName = "web-ui";
     let data = null;
@@ -31,11 +32,22 @@ const urlGenerate = (component) => {
     return staticUrl + url;
 };
 
-const get = (url, callback) => {
-    $.getJSON(url, (data) => {
-        //if (data.status !== 200) return callback(new Error("Error al obtener la data"));
-        callback(null, data);
+const getJSON = (url, cb) => {
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('load', () => {
+
+        if (xhr.status !== 200) {
+            return cb(new Error('Error loading JSON from ' + url + '(' + xhr.status + ')'));
+        }
+
+        cb(null, xhr.response);
     });
+
+    xhr.open('GET', url);
+    xhr.responseType = 'json';
+    xhr.send();
 };
 
 //END GETJSON

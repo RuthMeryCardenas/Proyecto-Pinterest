@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 const render = (root) => {
     root.empty();
     const wrapper = $('<div class="wrapper"></div>');
@@ -17,14 +19,15 @@ const state = {
     current_pin: "AZvD2sZHc13NAEh_yzBNFXT2gG8Ev5dHlBFLxorpuq7RIFTL66qnsJI"
 };
 
-$( _ => {
 
-    get(urlGenerate('pin-list'),(err,data) => {
-        console.log(data);
-    });
+$(_ => {
 
-    get(urlGenerate('pin'),(err,data) => {
-        console.log(data);
+    getJSON(generate_url("board", "web-ui"), (err, json) => {
+        if (err) {
+            return alert(err.message);
+        }
+        state.board = json.data;
+        console.log(state.board);
     });
 
     const root = $('.root');

@@ -5920,7 +5920,7 @@ button.close {
   color: #b4b4b4; }
 
 body {
-  padding-top: 50px;
+  padding-top: 80px;
   color: #555555; }
 
 .btn.btn-danger {
@@ -5989,9 +5989,30 @@ body {
   display: inline-block; }
 
 .container__userboard {
-  background-color: #eee;
-  height: 50px; }
+  margin-bottom: 20px; }
+  .container__userboard .row {
+    padding-top: 10%; }
+  .container__userboard .container__img img {
+    margin-top: 50%;
+    margin-left: 50%;
+    width: 60px;
+    border-radius: 50%; }
+  .container__userboard p {
+    margin: 0;
+    font-size: 1.2rem; }
+
+.container__btn-follow .btn-default {
+  float: right;
+  color: #b7071b; }
+  .container__btn-follow .btn-default:focus {
+    outline: none;
+    background-color: #b7071b;
+    color: #fff; }
 
 @media (min-width: 768px) {
   body {
-    padding-top: 150px; } }
+    padding-top: 150px; }
+  .container__img img {
+    margin-top: 30%; }
+  .container__userboard .row {
+    padding-top: 0; } }
