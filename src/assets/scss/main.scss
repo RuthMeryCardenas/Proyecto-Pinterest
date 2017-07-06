@@ -8,7 +8,7 @@ $inline-block: inline-block;
 //               Rojo : firebrick
 
 body {
-  padding-top: 70px;
+  padding-top: 50px;
   color: $gray;
 }
 
@@ -100,3 +100,13 @@ body {
   display: $inline-block;
 }
 
+.container__userboard{
+  background-color: #eee;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  body{
+    padding-top: 150px;
+  }
+}

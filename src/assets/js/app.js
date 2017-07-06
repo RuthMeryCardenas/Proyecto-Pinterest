@@ -4,6 +4,7 @@ const render = (root) => {
     root.empty();
     const wrapper = $('<div class="wrapper"></div>');
     wrapper.append(Header());
+    wrapper.append(Board());
 
     root.append(wrapper);
 };
@@ -18,17 +19,10 @@ const state = {
 
 $( _ => {
 
-    get(urlGenerate('creator-board'),(err,data) => {
-        //if (err) console.log(err);
-        console.log(data);
-    });
     get(urlGenerate('pin-list'),(err,data) => {
         console.log(data);
     });
 
-    get(urlGenerate('board'),(err,data) => {
-       console.log(data);
-    });
     get(urlGenerate('pin'),(err,data) => {
         console.log(data);
     });

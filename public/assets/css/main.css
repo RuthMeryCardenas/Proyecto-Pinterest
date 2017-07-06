@@ -5920,7 +5920,7 @@ button.close {
   color: #b4b4b4; }
 
 body {
-  padding-top: 70px;
+  padding-top: 50px;
   color: #555555; }
 
 .btn.btn-danger {
@@ -5987,3 +5987,11 @@ body {
 
 .navbar-header {
   display: inline-block; }
+
+.container__userboard {
+  background-color: #eee;
+  height: 50px; }
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 150px; } }
