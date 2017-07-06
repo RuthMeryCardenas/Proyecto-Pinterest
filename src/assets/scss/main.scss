@@ -176,6 +176,99 @@ body {
   }
 }
 
+.pin {
+  width: 25%;
+  height: 400px;
+  margin: auto;
+}
+
+.pin {
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.modal-content {
+  border: 0;
+  box-shadow: none;
+  font-family: Helvetica;
+}
+
+.modal-backdrop {
+  background-color: #e8e8e8;
+}
+
+.modal-backdrop.in {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.btn {
+  &.btn-default {
+    background-color: #efefef;
+    border: 0;
+    &:hover {
+      background-color: #e8e8e8;
+    }
+  }
+}
+
+.close {
+  margin-right: 5%;
+  margin-top: 1.75%;
+}
+
+.close {
+  span {
+    font-size: 1.5em;
+  }
+}
+
+.modal-header {
+  .icons {
+    font-size: 21px;
+
+    span[class^=icon-] {
+      padding: 0.5em;
+
+      &:hover {
+        background-color: #e8e8e8;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .save {
+    text-align: right;
+  }
+}
+
+.modal-body .row {
+  margin-bottom: 1.5em;
+}
+
+.modal-body .pin-title {
+  color: #555555;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 23px;
+}
+
+.modal-body .pin-image img {
+  border-radius: 1em;
+  width: 100%;
+}
+
+.pin-author .site-name {
+  font-size: 0.8571em;
+  line-height: 1rem;
+}
+
+.pin-author .site-name span {
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   body {
     padding-top: 150px;
@@ -190,7 +283,11 @@ body {
       padding-top: 0;
     }
   }
-  .user{
+  .user {
     display: block;
+  }
+
+  .modal-dialog {
+    width: 650px;
   }
 }

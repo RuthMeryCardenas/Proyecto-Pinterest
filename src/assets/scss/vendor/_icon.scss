@@ -56,7 +56,7 @@
 }
 .icon-check:before {
   content: "\e907";
-  color: #555;
+  color: #b4b4b4;
 }
 .icon-close:before {
   content: "\e909";
@@ -72,21 +72,22 @@
 }
 .icon-more .path1:before {
   content: "\e90c";
-  color: rgb(185, 185, 185);
+  color: #b5b5b5;
 }
 .icon-more .path2:before {
   content: "\e90d";
   margin-left: -1em;
-  color: rgb(185, 185, 185);
+  color: #b5b5b5;
 }
 .icon-more .path3:before {
   content: "\e90e";
   margin-left: -1em;
-  color: rgb(187, 187, 187);
+  color: #b5b5b5;
 }
 .icon-pin:before {
   content: "\e90f";
   color: #fff;
+  margin-right: 0.20em;
 }
 .icon-plus:before {
   content: "\e910";
@@ -104,6 +105,10 @@
 .icon-search:before {
   content: "\e913";
   color: #b4b4b4;
+}
+.icon-up:before {
+  content: "\e914";
+  color: #b5b5b5;
 }
 .icon-user:before {
   content: "\e915";

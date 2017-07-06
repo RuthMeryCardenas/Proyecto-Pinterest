@@ -5866,7 +5866,7 @@ button.close {
 
 .icon-check:before {
   content: "\e907";
-  color: #555; }
+  color: #b4b4b4; }
 
 .icon-close:before {
   content: "\e909";
@@ -5882,21 +5882,22 @@ button.close {
 
 .icon-more .path1:before {
   content: "\e90c";
-  color: #b9b9b9; }
+  color: #b5b5b5; }
 
 .icon-more .path2:before {
   content: "\e90d";
   margin-left: -1em;
-  color: #b9b9b9; }
+  color: #b5b5b5; }
 
 .icon-more .path3:before {
   content: "\e90e";
   margin-left: -1em;
-  color: #bbbbbb; }
+  color: #b5b5b5; }
 
 .icon-pin:before {
   content: "\e90f";
-  color: #fff; }
+  color: #fff;
+  margin-right: 0.20em; }
 
 .icon-plus:before {
   content: "\e910";
@@ -5915,6 +5916,13 @@ button.close {
   content: "\e913";
   color: #b4b4b4; }
 
+<<<<<<< HEAD
+=======
+.icon-up:before {
+  content: "\e914";
+  color: #b5b5b5; }
+
+>>>>>>> origin/04-Modal
 .icon-user:before {
   content: "\e915";
   color: #b4b4b4; }
@@ -5940,6 +5948,7 @@ body {
 .navbar .container__title {
   background-color: rgba(255, 255, 255, 0.8); }
 
+<<<<<<< HEAD
 .navbar h3 {
   margin: 15px 0px; }
 
@@ -6047,3 +6056,91 @@ body {
     padding-top: 0; }
   .user {
     display: block; } }
+=======
+body {
+  background-color: pink; }
+
+.pin {
+  width: 25%;
+  height: 400px;
+  margin: auto; }
+
+.pin img {
+  height: 100%;
+  width: 100%; }
+
+.modal-content {
+  border: 0;
+  box-shadow: none;
+  font-family: Helvetica; }
+
+.modal-backdrop {
+  background-color: #e8e8e8; }
+
+.modal-backdrop.in {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.btn.btn-danger {
+  background-color: #b7071b;
+  font-weight: bold;
+  padding: 0.6em 1em; }
+
+.btn.btn-danger:hover {
+  color: #e8e8e8;
+  background-color: #9e0617; }
+
+.btn.btn-danger span[class^=icon-] {
+  font-size: 1em; }
+
+.btn.btn-default {
+  background-color: #efefef;
+  border: 0; }
+
+.btn.btn-default:hover {
+  background-color: #e8e8e8; }
+
+.close {
+  margin-right: 5%;
+  margin-top: 1.75%; }
+
+.close span {
+  font-size: 1.5em; }
+
+.modal-header .icons {
+  font-size: 21px; }
+
+.modal-header .icons span[class^=icon-] {
+  padding: 0.5em; }
+
+.modal-header .icons span[class^=icon-]:hover {
+  background-color: #e8e8e8;
+  border-radius: 50%; }
+
+.modal-header .save {
+  text-align: right; }
+
+.modal-body .row {
+  margin-bottom: 1.5em; }
+
+.modal-body .pin-title {
+  color: #555555;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 23px; }
+
+.modal-body .pin-image img {
+  border-radius: 1em;
+  width: 100%; }
+
+.pin-author .site-name {
+  font-size: 0.8571em;
+  line-height: 1rem; }
+
+.pin-author .site-name span {
+  font-weight: bold; }
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 650px; } }
+>>>>>>> origin/04-Modal

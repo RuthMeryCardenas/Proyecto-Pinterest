@@ -17,10 +17,10 @@ const state = {
     creator_board: null,
     board: null,
     pins: null,
-    current_pin: "AZvD2sZHc13NAEh_yzBNFXT2gG8Ev5dHlBFLxorpuq7RIFTL66qnsJI"
+    current_pin: null
 };
 
-$(_ => {
+$( _ => {
 
     getJSON(generate_url("board"), (err, json) => {
         if (err) {
@@ -40,8 +40,11 @@ $(_ => {
                     return alert(err.message);
                 }
                 state.pins = obj.data;
+
+
                 const root = $('.root');
                 render(root);
+
             });
         });
 
