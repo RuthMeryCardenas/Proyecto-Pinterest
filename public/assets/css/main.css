@@ -6010,6 +6010,7 @@ body {
     color: #fff; }
 
 .user {
+  display: none;
   margin: 20px auto; }
   .user h4, .user p, .user img {
     margin-top: 5px; }
@@ -6043,4 +6044,6 @@ body {
   .container__img img {
     margin-top: 30%; }
   .container__userboard .row {
-    padding-top: 0; } }
+    padding-top: 0; }
+  .user {
+    display: inline-block; } }

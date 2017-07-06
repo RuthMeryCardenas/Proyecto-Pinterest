@@ -102,7 +102,7 @@ body {
 .container__userboard {
   margin-bottom: 40px;
 
-  .row{
+  .row {
     padding-top: 10%;
   }
 
@@ -133,6 +133,7 @@ body {
 }
 
 .user {
+  display: none;
   margin: 20px auto;
   h4, p, img {
     margin-top: 5px;
@@ -173,7 +174,6 @@ body {
       display: inline-block;
     }
   }
-
 }
 
 @media (min-width: 768px) {
@@ -185,9 +185,12 @@ body {
       margin-top: 30%;
     }
   }
-  .container__userboard{
-    .row{
+  .container__userboard {
+    .row {
       padding-top: 0;
     }
+  }
+  .user{
+    display: inline-block;
   }
 }
