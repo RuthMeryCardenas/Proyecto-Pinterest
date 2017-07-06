@@ -5916,13 +5916,10 @@ button.close {
   content: "\e913";
   color: #b4b4b4; }
 
-<<<<<<< HEAD
-=======
 .icon-up:before {
   content: "\e914";
   color: #b5b5b5; }
 
->>>>>>> origin/04-Modal
 .icon-user:before {
   content: "\e915";
   color: #b4b4b4; }
@@ -5948,7 +5945,6 @@ body {
 .navbar .container__title {
   background-color: rgba(255, 255, 255, 0.8); }
 
-<<<<<<< HEAD
 .navbar h3 {
   margin: 15px 0px; }
 
@@ -6047,28 +6043,6 @@ body {
   .item:hover .btn.btn-danger {
     display: inline-block; }
 
-@media (min-width: 768px) {
-  body {
-    padding-top: 150px; }
-  .container__img img {
-    margin-top: 30%; }
-  .container__userboard .row {
-    padding-top: 0; }
-  .user {
-    display: block; } }
-=======
-body {
-  background-color: pink; }
-
-.pin {
-  width: 25%;
-  height: 400px;
-  margin: auto; }
-
-.pin img {
-  height: 100%;
-  width: 100%; }
-
 .modal-content {
   border: 0;
   box-shadow: none;
@@ -6081,24 +6055,11 @@ body {
   opacity: 1;
   filter: alpha(opacity=100); }
 
-.btn.btn-danger {
-  background-color: #b7071b;
-  font-weight: bold;
-  padding: 0.6em 1em; }
-
-.btn.btn-danger:hover {
-  color: #e8e8e8;
-  background-color: #9e0617; }
-
-.btn.btn-danger span[class^=icon-] {
-  font-size: 1em; }
-
 .btn.btn-default {
   background-color: #efefef;
   border: 0; }
-
-.btn.btn-default:hover {
-  background-color: #e8e8e8; }
+  .btn.btn-default:hover {
+    background-color: #e8e8e8; }
 
 .close {
   margin-right: 5%;
@@ -6109,13 +6070,11 @@ body {
 
 .modal-header .icons {
   font-size: 21px; }
-
-.modal-header .icons span[class^=icon-] {
-  padding: 0.5em; }
-
-.modal-header .icons span[class^=icon-]:hover {
-  background-color: #e8e8e8;
-  border-radius: 50%; }
+  .modal-header .icons span[class^=icon-] {
+    padding: 0.5em; }
+    .modal-header .icons span[class^=icon-]:hover {
+      background-color: #e8e8e8;
+      border-radius: 50%; }
 
 .modal-header .save {
   text-align: right; }
@@ -6141,6 +6100,13 @@ body {
   font-weight: bold; }
 
 @media (min-width: 768px) {
+  body {
+    padding-top: 150px; }
+  .container__img img {
+    margin-top: 30%; }
+  .container__userboard .row {
+    padding-top: 0; }
+  .user {
+    display: block; }
   .modal-dialog {
     width: 650px; } }
->>>>>>> origin/04-Modal

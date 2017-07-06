@@ -8,6 +8,7 @@ const render = (root) => {
     wrapper.append(Header());
     wrapper.append(Board());
     wrapper.append(Grid());
+    wrapper.append(myModal());
 
     root.append(wrapper);
 };
