@@ -6,14 +6,10 @@ const state = {
   creator_board: null,
   board        : null,
   pins         : null,
-  current_pin  : "523473156678861702"
+  // current_pin  : "AZvD2sZHc13NAEh_yzBNFXT2gG8Ev5dHlBFLxorpuq7RIFTL66qnsJI"
+  current_pin  : "523473156664821074"
 };
 
 $( _ => {
   $(".wrapper").append(myModal());
-  // getJSON(generate_url("pin",state.current_pin), (err, json) => {
-  //   if (err) { return alert(err.message);}
-  //   state.current_pin = json.data;
-  //   console.log(state.current_pin);
-  // });
 });
