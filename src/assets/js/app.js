@@ -1,11 +1,13 @@
-'use strict';
+//ARCHIVO APP
 
+'use strict';
 
 const render = (root) => {
     root.empty();
     const wrapper = $('<div class="wrapper"></div>');
     wrapper.append(Header());
     wrapper.append(Board());
+    wrapper.append(Grid());
 
     root.append(wrapper);
 };
@@ -26,17 +28,22 @@ $(_ => {
         }
         state.board = json.data;
 
-        getJSON(generate_url('creator-board'), (err,data) => {
+        getJSON(generate_url('creator-board'), (err, data) => {
             if (err) {
                 return alert(err.message);
             }
+
             state.creator_board = data.data;
-            console.log(state.creator_board);
-            const root = $('.root');
-            render(root);
+
+            getJSON(url, (err, obj) => {
+                if (err) {
+                    return alert(err.message);
+                }
+                state.pins = obj.data;
+                const root = $('.root');
+                render(root);
+            });
         });
 
     });
-
-
 });

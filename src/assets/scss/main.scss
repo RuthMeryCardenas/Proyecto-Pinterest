@@ -132,6 +132,50 @@ body {
   }
 }
 
+.user {
+  margin: 20px auto;
+  h4, p, img {
+    margin-top: 5px;
+  }
+}
+
+.item {
+  background-color: #ffffff;
+  border-radius: 0.5em;
+  padding-top: 15px;
+
+  .img-responsive {
+    border-radius: 0.5em;
+  }
+
+  .btn.btn-danger {
+    background-color: #b7071b;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 25px;
+    right: 25px;
+
+    &:hover {
+      background-color: #9e0617;
+    }
+    &:focus {
+      outline: none;
+    }
+    span[class^=icon-] {
+      font-size: 1em;
+    }
+  }
+
+  &:hover {
+    .btn.btn-danger {
+      display: inline-block;
+    }
+  }
+
+}
+
 @media (min-width: 768px) {
   body {
     padding-top: 150px;
