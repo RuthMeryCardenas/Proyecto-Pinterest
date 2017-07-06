@@ -12,12 +12,10 @@ const Grid = (update) => {
 			const id = state.pins[i].id;
 
 			const user = $('<div class="user row"></div>');
-			const imgUser = $('<div class="col-xs-2"></div>');
-			const avatar = $('<img src="https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_280.jpg" class="img-circle" style="width: 50px">');
-			const h1 = $('<div class="col-xs-10"><h4>'+state.pins[i].creator.first_name+'</h4></div>');
+			const imgUser = $('<div class="col-xs-3"></div>');
+			const avatar = $('<img src="https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_280.jpg" class="img-circle" style="width: 100%">');
+			const h1 = $('<div class="col-xs-9"><h4>'+state.pins[i].creator.first_name+'</h4></div>');
 			const p = $('<p>'+state.pins[i].board.name+'</p>');
-			//const nombre = state.pins[i].creator.first_name;
-			//const board = state.pins[i].board.name;
 			console.log(state.pins[i].metadata);
 
 			img.attr("src", urlImg);

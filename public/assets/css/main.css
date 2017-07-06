@@ -5938,9 +5938,8 @@ h1 {
 */
 .user {
   margin: 20px auto; }
-  .user h4, .user p {
-    line-height: 10px;
-    padding-left: 15px; }
+  .user h4, .user p, .user img {
+    margin-top: 5px; }
 
 .item {
   background-color: #ffffff;
